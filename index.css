@@ -1,0 +1,351 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+}
+
+body{
+    font-family: 'Playfair Display';
+}
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    color: white;
+    background-color: black;
+}
+
+.navbar-container{
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    width: 100%;
+}
+
+.menu-container{
+    flex: 6;
+}
+
+.menu-list{
+    display: flex;
+    list-style: none;
+}
+
+.menu-list-item{
+    margin-right: 30px;
+}
+
+.menu-list-item.active{
+    font-weight: bold;
+}
+
+.profile-container{
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.profile-text-container{
+    margin: 0 25px;
+}
+
+.profile-picture{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.toggle{
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius:30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+
+.toggle-icon{
+    color: rgb(197, 203, 22);
+}
+
+.toggle-ball{
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s case all;
+}
+
+.logo-container{
+    flex: 1;
+    
+}
+
+.logo{
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: green;
+}
+
+.sidebar{
+    width: 50px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    align-items: center;
+}
+
+.lift-menu-icon{
+    color: white;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.container{
+    background-color: black;
+    width: 100%;
+    /* min-height: calc(100vh - 50px); */
+    color: white;
+}
+
+.content-container{
+    margin-left: 50px;
+}
+
+.peature-contance{
+    height: 50vh;
+    padding: 50px;
+    
+}
+
+.feature-title{
+    width: 200px;
+
+}
+
+.peature-des{
+    width: 500px;
+    color: lightblue;
+    margin: 300 0px;
+}
+
+/* .feature-bottom{
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 18px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+} */
+
+.movie-list-container{
+    padding: 20px;
+}
+
+.movie-list-waper{
+    position: relative;
+    /* background-color: wheat; */
+    overflow: hidden;
+}
+
+.movie-list{
+    display: flex;
+    height: 300px;
+    align-items: center;
+    transform: translateX(0);
+    transition: all 1s ease-in-out;
+}
+
+.movie-list-item{
+    margin-right: 30px;
+    position: relative;
+
+}
+
+.movie-list-item:hover .movie-list-item-img{
+    transform: scale(1.2);
+    margin: 0 30px;
+    opacity: 0.5;
+}
+
+.movie-list-item:hover .movie-list-item-title,
+.movie-list-item:hover .movie-list-item-desc,
+.movie-list-item:hover .movie-list-item-buttom{
+    opacity: 1;
+}
+
+.movie-list-item-img{
+    transition: all 1s ease-in-out;
+    width: 170px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.movie-list-item-title{
+    background-color: rgb(26, 26, 16);
+    padding: 0 10px;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    left: 50px;
+    opacity: 0;
+    transition:  1s all ease-in-out;
+}
+
+.movie-list-item-desc{
+    background-color: rgb(26, 26, 16);
+    padding: 10px;
+    font-size: 10px;
+    position: absolute;
+    top: 30%;
+    left: 50px;
+    width: 220px;
+    opacity: 0;
+    transition:  1s all ease-in-out;
+}
+
+.movie-list-item-buttom{
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    opacity: 0;
+    transition:  1s all ease-in-out;
+}
+
+.arrow{
+    font-size: 120px;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    color: gray;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.container.active{
+    background-color: white;
+
+}
+
+.movie-list-title.active{
+    color: black;
+}
+
+.navbar.active{
+    background-color: white;
+    color: black;
+}
+
+.sidebar.active{
+    background-color: white;
+}
+
+.lift-menu-icon.active{
+    color: black;
+}
+
+.toggle.active{
+    background-color: black;
+}
+
+.toggle-ball.active{
+    background-color: white;
+    transform: translateX(-20px)
+}
+
+.footer{   
+    background-color: black;
+}
+
+.footer-container{
+    background-color: brown;
+    width: 100%;
+    padding: 70px 30px 20px;
+}
+
+.sociallicon{
+    display: flex;
+    justify-content: center;
+}
+
+.sociallicon a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.sociallicon a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+}
+
+/* hover effact */
+
+.sociallicon a:hover{
+    background-color: black;
+    transition: 0.5s;
+}
+
+.sociallicon a:hover i{
+    background-color: black;
+    transition: 0.5s;
+    color: white;
+}
+
+.footer-nav{
+    margin: 30px;
+}
+
+.footer-nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.footer-nav ul li a {
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: o.7;
+    transition: 0.5s;
+}
+
+.footer-nav ul li a:hover{
+    opacity: 1;
+}
+
+.booter-buttom p{
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-family: Arial;
+    margin: 0px 5px;
+    font-size: 15px;
+    padding: 5px;
+}
